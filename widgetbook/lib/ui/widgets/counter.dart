@@ -10,9 +10,20 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart';
       'https://www.figma.com/design/HsANkdhbsCNTkXBzNJRNLD/Groceries-Demo?node-id=7284-8778&t=N6qwmLP7MP59ClWB-4',
 )
 Widget buildCounterCase(BuildContext context) {
-  return Counter(
-    value: context.knobs.int.input(label: 'value'),
-    onIncrement: () {},
-    onDecrement: () {},
+  var count = context.knobs.int.input(label: 'value');
+  return StatefulBuilder(
+    builder: (context, setState) => Counter(
+      value: count,
+      onIncrement: () {
+        setState(() {
+          count++;
+        });
+      },
+      onDecrement: () {
+        setState(() {
+          count--;
+        });
+      },
+    ),
   );
 }

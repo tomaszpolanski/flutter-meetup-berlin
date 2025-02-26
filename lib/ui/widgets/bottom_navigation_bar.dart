@@ -19,8 +19,8 @@ class BottomNavigationBar extends StatelessWidget {
         children: [
           NavigationItem(
             isSelected: false,
-            iconUnselected: FontAwesomeIcons.lemon,
-            iconSelected: FontAwesomeIcons.solidLemon,
+            iconUnselected: FontAwesomeIcons.piggyBank,
+            iconSelected: FontAwesomeIcons.piggyBank,
             text: AppLocalizations.of(context)!.navigationShopLabel,
           ),
           NavigationItem(
